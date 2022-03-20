@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --fs: 16px;
+    --ff: 'Red Hat Display', sans-serif;
+
+}
+body, html{
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-size: var(--fs);
+    font-family: var(--ff);
+    background: var(--pale-blue);
+}
+button{
+    cursor: pointer;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.card{
+    width: 25rem;
+    height: 41rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0rem 1rem 2rem 0px hsla(245, 75%, 52%, 0.2);
+    text-align: center;
+    transform: scale(0.9);
+}
+.hero{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    padding-bottom: 2.25rem;
+}
+h1{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin: 0;
+}
+p{
+    width: 66%;
+    line-height: 1.7rem;
+    color: var(--desaturated-blue);
+    padding-bottom: 0.5rem;
+}
+.plan{
+    width: 90%;
+    height: 6rem;
+    background: var(--very-pale-blue);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.plan div *{
+    display: block;
+    margin: 0.2rem;
+    position: relative;
+    margin-left: 5rem;
+}
+.plan div::before{
+    content: url("images/icon-music.svg");
+    position: absolute;
+    left: 1rem;
+    top: calc(50% - 25px)
+}
+.plan a{
+    font-weight: bold;
+    color: var(--bright-blue);
+    margin-right: 1.5rem;
+    transition: opacity 0.25s;
+}
+.plan a:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+.annual-plan{
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+}
+.price{
+    color: var(--desaturated-blue)
+}
+.proceed{
+    margin: 2rem 0 1.25rem 0;
+    width: 90%;
+    height: 3rem;
+    border: 0;
+    border-radius: 1rem;
+    background: var(--bright-blue);
+    color: white;
+    font-size: 1rem;
+    font-family: var(--ff);
+    font-weight: 700;
+    box-shadow: 0 1rem 0.75rem hsla(245, 75%, 52%, 0.2);
+    transition: opacity 0.25s;
+}
+.proceed:hover{
+    opacity: 0.75;
+}
+.cancel{
+    border: 0;
+    background: 0;
+    font-size: 1.1rem;
+    font-family: var(--ff);
+    font-weight: 700;
+    color: var(--desaturated-blue);
+    transition: color 0.25s;
+}
+.cancel:hover{
+    color: var(--dark-blue);
+}
